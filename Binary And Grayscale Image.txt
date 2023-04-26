@@ -1,0 +1,12 @@
+from PIL import Image
+
+# open the input image
+input_image = Image.open("/content/WIN_20221003_16_57_08_Pro.jpg")
+
+# convert to binary (black and white) image
+binary_image = input_image.convert('1')
+binary_image.save("binary_image.jpg")
+
+# convert to grayscale image
+grayscale_image = input_image.convert('L')
+grayscale_image.save("grayscale_image.jpg")

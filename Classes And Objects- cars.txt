@@ -1,0 +1,20 @@
+import datetime
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def get_age(self):
+        current_year = datetime.datetime.now().year
+        age = current_year - self.year
+        return age
+# create a car object
+car1 = Car("Toyota", "Camry", 2010)
+
+# get the age of the car
+age = car1.get_age()
+
+# display the result
+print(f"Age: {age}")

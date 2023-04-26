@@ -1,0 +1,13 @@
+import numpy as np
+
+# Create two 2D NumPy arrays of integers
+a = np.array([[1, 2, 3], [4, 5, 6]])
+b = np.array([[7, 8, 9], [10, 11, 12]])
+
+# Add the two matrices and display the result
+print("Result of adding the two matrices:")
+print(a + b)
+
+# Multiply the two matrices and display the result
+print("Result of multiplying the two matrices:")
+print(np.dot(a, b.T))

@@ -1,0 +1,27 @@
+# Accept a list of integers from user
+num_list = []
+n = int(input("Enter the number of elements in the list: "))
+for i in range(n):
+    num = int(input(f"Enter element {i+1}: "))
+    num_list.append(num)
+
+# 1. Print the list element in the reverse order.
+print("The list in reverse order: ", num_list[::-1])
+
+# 2. Count number of times specific elements appears in list.
+count_elem = int(input("Enter an element to count its occurrences: "))
+count = num_list.count(count_elem)
+print(f"The element {count_elem} appears {count} times in the list")
+
+# 3. Add the new elements to the end of the list.
+new_elem = int(input("Enter a new element to add to the list: "))
+num_list.append(new_elem)
+print("List after adding the new element: ", num_list)
+
+# 4. Sort the list in ascending order.
+num_list.sort()
+print("List sorted in ascending order: ", num_list)
+
+# 5. Find the sum of all the elements in the list.
+list_sum = sum(num_list)
+print("Sum of all the elements in the list: ", list_sum)

@@ -1,0 +1,36 @@
+# Define conversion functions
+def km_to_miles(km):
+    return km * 0.621371
+
+def miles_to_km(miles):
+    return miles * 1.60934
+
+def cm_to_inches(cm):
+    return cm / 2.54
+
+def inches_to_cm(inches):
+    return inches * 2.54
+
+# Get user input for conversion type and value
+conversion = input("What conversion do you want to perform? (km to miles, miles to km, cm to inches, inches to cm): ")
+value = float(input("Enter the value to convert: "))
+
+# Perform conversion based on user input
+if conversion == "km to miles":
+    result = km_to_miles(value)
+    print(value, "kilometres is equal to", result, "miles.")
+
+elif conversion == "miles to km":
+    result = miles_to_km(value)
+    print(value, "miles is equal to", result, "kilometres.")
+
+elif conversion == "cm to inches":
+    result = cm_to_inches(value)
+    print(value, "centimetres is equal to", result, "inches.")
+
+elif conversion == "inches to cm":
+    result = inches_to_cm(value)
+    print(value, "inches is equal to", result, "centimetres.")
+
+else:
+    print("Invalid conversion entered.")

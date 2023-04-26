@@ -1,0 +1,17 @@
+import pandas as pd
+
+# Load the dataset into a pandas dataframe
+df = pd.read_csv('Toyota.csv')
+
+# Display first 10 rows of data frame
+print("First 10 rows:\n", df.head(10))
+
+# Display last 10 rows of data frame
+print("Last 10 rows:\n", df.tail(10))
+
+# Remove the duplicate data
+df.drop_duplicates(inplace=True)
+print("After removing duplicates:\n", df)
+
+# Get summary statistics of numerical columns using .describe() command
+print("Summary statistics:\n", df.describe())

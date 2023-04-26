@@ -1,0 +1,17 @@
+def square_list(lst):
+    # Create an empty list to store the result
+    result = []
+    
+    # Loop through the elements of the input list
+    for num in lst:
+        # Calculate the square of the current element and append it to the result list
+        square = num ** 2
+        result.append(square)
+    
+    # Return the result list
+    return result
+
+# Example usage
+my_list = [2, 4, 6, 8, 10]
+result_list = square_list(my_list)
+print(result_list)

@@ -1,0 +1,13 @@
+string = input("Enter a string: ")
+
+# Convert the string to lowercase and remove all non-alphanumeric characters
+string = ''.join(e for e in string if e.isalnum()).lower()
+
+# Reverse the string using slicing
+reverse_string = string[::-1]
+
+# Check if the original string is equal to the reversed string
+if string == reverse_string:
+    print("The string is a palindrome")
+else:
+    print("The string is not a palindrome")

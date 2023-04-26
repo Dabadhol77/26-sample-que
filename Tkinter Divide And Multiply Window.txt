@@ -1,0 +1,51 @@
+import tkinter as tk
+
+# Function to display the multiplication of two numbers
+def multiply():
+    num1 = float(entry1.get())
+    num2 = float(entry2.get())
+    result = num1 * num2
+    label_mul.config(text=f"Multiplication: {result}")
+
+# Function to display the division of two numbers
+def divide():
+    num1 = float(entry1.get())
+    num2 = float(entry2.get())
+    result = num1 / num2
+    label_div.config(text=f"Division: {result:.2f}")
+
+# Create a tkinter window
+root = tk.Tk()
+
+# Set the window title
+root.title("Simple Calculator")
+
+# Create two labels and entry widgets to input two numbers
+label1 = tk.Label(root, text="Number 1:")
+label1.grid(row=0, column=0, padx=5, pady=5)
+
+entry1 = tk.Entry(root)
+entry1.grid(row=0, column=1, padx=5, pady=5)
+
+label2 = tk.Label(root, text="Number 2:")
+label2.grid(row=1, column=0, padx=5, pady=5)
+
+entry2 = tk.Entry(root)
+entry2.grid(row=1, column=1, padx=5, pady=5)
+
+# Create two buttons to display the multiplication and division of the two numbers
+button_mul = tk.Button(root, text="Multiply", command=multiply)
+button_mul.grid(row=2, column=0, padx=5, pady=5)
+
+button_div = tk.Button(root, text="Divide", command=divide)
+button_div.grid(row=2, column=1, padx=5, pady=5)
+
+# Create two labels to display the multiplication and division of the two numbers
+label_mul = tk.Label(root, text="")
+label_mul.grid(row=3, column=0, padx=5, pady=5)
+
+label_div = tk.Label(root, text="")
+label_div.grid(row=3, column=1, padx=5, pady=5)
+
+# Start the main event loop
+root.mainloop()

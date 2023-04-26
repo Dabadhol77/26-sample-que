@@ -1,0 +1,48 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Create sample data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Line plot
+plt.plot(x, y)
+plt.title("Line plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+
+# Scatter plot
+x = np.random.randn(100)
+y = np.random.randn(100)
+plt.scatter(x, y)
+plt.title("Scatter plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+
+# Histogram
+data = np.random.normal(0, 1, size=1000)
+plt.hist(data, bins=30)
+plt.title("Histogram")
+plt.xlabel("X-axis")
+plt.ylabel("Frequency")
+plt.show()
+
+# Bar chart
+data = {'apples': 10, 'oranges': 15, 'lemons': 5, 'limes': 20}
+names = list(data.keys())
+values = list(data.values())
+plt.bar(names, values)
+plt.title("Bar chart")
+plt.xlabel("Fruit")
+plt.ylabel("Quantity")
+plt.show()
+
+# Heatmap
+data = pd.DataFrame(np.random.randn(5, 5))
+sns.heatmap(data, annot=True)
+plt.title("Heatmap")
+plt.show()
