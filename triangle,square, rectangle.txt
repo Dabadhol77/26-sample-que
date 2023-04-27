@@ -1,0 +1,19 @@
+# Area of a Triangle
+def triangle_area(base, height):
+    area = (base * height) / 2
+    return area
+
+# Area of a Square
+def square_area(side):
+    area = side * side
+    return area
+
+# Area of a Rectangle
+def rectangle_area(length, width):
+    area = length * width
+    return area
+
+# Example usage
+print("Area of a Triangle with base=5 and height=8:", triangle_area(5, 8))
+print("Area of a Square with side=4:", square_area(4))
+print("Area of a Rectangle with length=6 and width=10:", rectangle_area(6, 10))
